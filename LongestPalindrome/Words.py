@@ -1,14 +1,14 @@
-def isPal( str ):
+def isPal(inputString):
     beg = 0
-    end = len(str)
+    end = len(inputString)
     while (beg < end):
-        if (str[beg].lower() != str[end-1].lower()):
+        if (inputString[beg].lower() != inputString[end-1].lower()):
             return False
         beg += 1
         end -= 1
     return True
 
-f = open('input.txt', 'r')
+f = open('input.txt', 'r') # for a reasonably sized file
 text = f.read()
 length = len(text)
 
