@@ -3,7 +3,7 @@ def isPal( str ):
     end = len(str)
     while (beg < end):
         if (str[beg].lower() != str[end-1].lower()):
-            return False;
+            return False
         beg += 1
         end -= 1
     return True
