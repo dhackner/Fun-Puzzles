@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 def isPal(inputString):
+=======
+'''
+@author: Dan Hackner <dhackner>
+'''
+def isPal( str ):
+>>>>>>> Adding author doc
     beg = 0
     end = len(inputString)
     while (beg < end):
