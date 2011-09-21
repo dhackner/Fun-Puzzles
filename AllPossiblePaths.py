@@ -36,7 +36,7 @@ def num_paths(ingrid, x=0, y=0, step_counter=1):
         print_grid(ingrid)
     if x == y == (gridSize-1):
         if debug:
-            print_grid(ingrid, 1)
+            print_grid(ingrid, True)
         return 1
     else:
         total_paths_cell = 0 # Number of combined paths from surrounding cells
@@ -55,7 +55,7 @@ def get_steps(g, x, y):
     if y+1 < len(g[x]) and g[x][y+1] == 'x':
         yield (x, y+1)
 
-def print_grid(g, success=0):
+def print_grid(g, success=False):
     if success:
         print '---SUCCESS---'
     for y in range(0, len(g[0])):
