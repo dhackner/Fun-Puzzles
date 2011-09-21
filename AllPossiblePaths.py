@@ -1,5 +1,6 @@
-'''
-@author: Dan Hackner <dhackner>
+#!/usr/bin/env python
+
+"""Number of nonintersecting paths in an n X n grid from (0, 0) to (n, n)
 
 1x1 = 1
 2x2 = 2
@@ -11,9 +12,14 @@ This pattern is OEIS A007764 - number of nonintersecting (or self-avoiding) rook
 (according to OEIS):
 6x6 = 1262816
 7x7 = 575780564
-'''
+"""
 
 from copy import deepcopy
+
+__author__ = "Dan Hackner"
+__maintainer__ = "Dan Hackner"
+__email__ = "dan.hackner@gmail.com"
+__status__ = "Production"
 
 gridSize = 4
 gridDebug = False#True
