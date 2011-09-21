@@ -1,11 +1,13 @@
-<<<<<<< HEAD
-def isPal(inputString):
-=======
-'''
-@author: Dan Hackner <dhackner>
-'''
+#!/usr/bin/env python
+
+'''Find the longest palindrome in a text file.'''
+
+__author__ = "Dan Hackner"
+__maintainer__ = "Dan Hackner"
+__email__ = "dan.hackner@gmail.com"
+__status__ = "Production"
+
 def isPal( str ):
->>>>>>> Adding author doc
     beg = 0
     end = len(inputString)
     while (beg < end):
