@@ -7,7 +7,7 @@ __maintainer__ = "Dan Hackner"
 __email__ = "dan.hackner@gmail.com"
 __status__ = "Production"
 
-def isPal( str ):
+def isPal(inputString):
     beg = 0
     end = len(inputString)
     while (beg < end):
