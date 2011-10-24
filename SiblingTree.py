@@ -15,12 +15,12 @@ class Node:
         self.value = val
         self.left = l
         self.right = r
-        self.sibling = None
+        self.r_sibling = None
 
     def __str__(self):
         return_string = self.value
-        if self.sibling != None:
-            return_string += ' ->'+self.sibling.value
+        if self.r_sibling != None:
+            return_string += ' ->'+self.r_sibling.value
         return_string += ' /'
         if self.left != None:
             return_string += self.left.value
@@ -49,7 +49,7 @@ while q:
     if curr != None:
         q.append(curr.left)
         q.append(curr.right)
-        curr.sibling = q[0]
+        curr.r_sibling = q[0]
     elif q and q[-1] is not None: # To diverge away from an infinite loop
         q.append(None)
 
