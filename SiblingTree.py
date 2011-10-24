@@ -65,3 +65,34 @@ while q:
 
 print '====='
 print root
+
+# Constant memory solution
+
+root = Node('A', Node('B', None, Node('D', None, None)), Node('C', Node('E', None, Node('G', None, None)), Node('F', None, None)))
+curr = root
+leftmostsib = None
+firstchild = None
+
+while curr:
+    if curr.left:
+        if not firstchild:
+            firstchild = curr.left
+        if leftmostsib:
+            leftmostsib.r_sibling = curr.left
+        leftmostsib = curr.left
+    
+    if curr.right:
+        if not firstchild:
+            firstchild = curr.right
+        if leftmostsib:
+            leftmostsib.r_sibling = curr.right
+        leftmostsib = curr.right
+
+    curr = curr.r_sibling
+    if not curr:
+        curr = firstchild
+        leftmostsib = None
+        firstchild = None
+
+print '====='
+print root
