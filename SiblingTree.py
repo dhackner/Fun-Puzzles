@@ -31,13 +31,23 @@ class Node:
 
 """Example:
 
-       A
-     /   \
-    B     C
-     \   / \
-      D E   F
-         \
-          G
+        A
+    /      \
+  B          C
+    \       /  \
+      D    E    F
+            \
+              G
+
+Becomes:
+
+        A
+    /      \
+  B     ->   C
+    \       /  \
+      D -> E -> F
+            \
+              G
 """
 
 root = Node('A', Node('B', None, Node('D', None, None)), Node('C', Node('E', None, Node('G', None, None)), Node('F', None, None)))
