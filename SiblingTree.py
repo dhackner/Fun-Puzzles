@@ -50,11 +50,15 @@ Becomes:
               G
 """
 
+"""
+
+# Naive solution
+
 root = Node('A', Node('B', None, Node('D', None, None)), Node('C', Node('E', None, Node('G', None, None)), Node('F', None, None)))
 q = [root, None]
 
 while q:
-    print [x.value if x else 'None' for x in q ]
+    # print [x.value if x else 'None' for x in q ]
     curr = q.pop(0)
     if curr != None:
         q.append(curr.left)
@@ -65,6 +69,7 @@ while q:
 
 print '====='
 print root
+"""
 
 # Constant memory solution
 
